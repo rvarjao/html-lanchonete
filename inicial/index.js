@@ -1,6 +1,7 @@
 fetch('dados.csv')
     .then(response => response.text())
     .then(data => {
+        console.log(data);
         const linhas = data.split('\n');
         const tabela = document.getElementById('tabela-dados');
 
@@ -8,13 +9,13 @@ fetch('dados.csv')
             if (index === 0) {
                 return;
             }
+            console.log(linha);
             const colunas = linha.split(',');
             if (colunas.length < 7) {
                 return;
             }
             const tr = document.createElement('tr');
             colunas.forEach((coluna, i) => {
-                const configColuna = config[i];
                 const td = document.createElement('td');
                 td.textContent = coluna;
                 tr.appendChild(td);
