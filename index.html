@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="index.js" crossorigin="anonymous" ></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="container p-3">
+    <h1>Lanchonete do Colégio Sinerge</h1>
+    <form id="novaVenda">
+        <div class="mb-3">
+            <label for="data" class="form-label">Data</label>
+            <input type="date" class="form-control" id="data" name="data" required>
+        </div>
+        <div class="mb-3">
+            <label for="aluno" class="form-label">Aluno</label>
+            <select class="form-select" id="aluno" name="aluno" required>
+                <option value="">Selecione um aluno</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="produto" class="form-label">Produto</label>
+            <select class="form-select" id="produto" name="produto" required>
+                <option value="">Selecione um produto</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="quantidade" class="form-label">Quantidade</label>
+            <input type="number" class="form-control" id="quantidade" name="quantidade" min="1" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Registrar Venda</button>
+    </form>
+    
+    <table class="table table-striped table-hover mt-5">
+        <thead class="table-dark">
+            <tr style="position: sticky; top: 0;">
+                <th>ID</th>
+                <th>Data</th>
+                <th>Aluno</th>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-dados">
+            <!-- Os dados serão inseridos aqui dinamicamente -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4" style="text-align: right; font-weight: bold;">Total Geral:</td>
+                <td id="total-quantidade" style="font-weight: bold;" id="totalQuantidade"></td>
+                <td></td>
+                <td id="total-geral" style="font-weight: bold;" id="totalGeral"></td>
+            </tr>
+        </tfoot>
+
+    </table>
+</div>
+
+</body>
+</html>
