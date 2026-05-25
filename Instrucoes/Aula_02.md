@@ -288,7 +288,6 @@ Seu `index.js` deve estar assim:
         });
     }
 
-// Deve-se aguardar o carregamento do DOM para verificar o localStorage
     window.onload = function() {
         if (localStorage.getItem('dadosLanchonete')) {
             carregarTabela();
